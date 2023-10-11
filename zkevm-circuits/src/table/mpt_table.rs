@@ -6,10 +6,12 @@ use crate::{
     },
 };
 use serde::{Deserialize, Serialize};
+use std::default;
 
 /// The types of proofs in the MPT table
-#[derive(Clone, Copy, Debug, Serialize, Deserialize)]
+#[derive(Clone, Copy, Debug, Serialize, Deserialize, Default)]
 pub enum MPTProofType {
+    #[default]
     /// Disabled
     Disabled,
     /// Nonce updated

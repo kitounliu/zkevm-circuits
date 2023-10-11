@@ -110,8 +110,8 @@ pub struct ExtensionNode {
 /// MPT start node
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct StartNode {
-    pub(crate) disable_preimage_check: bool,
-    pub(crate) proof_type: MPTProofType,
+    pub disable_preimage_check: bool,
+    pub proof_type: MPTProofType,
 }
 
 /// MPT extension branch node
@@ -157,6 +157,31 @@ pub struct Node {
     pub values: Vec<Hex>,
     /// MPT keccak data
     pub keccak_data: Vec<Hex>,
+}
+
+/// MPT node
+#[allow(missing_docs)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
+pub enum Node2 {
+    Start {
+        node: StartNode,
+        values: Vec<Hex>,
+    },
+    ExtensionBranch {
+        node: ExtensionBranchNode,
+        values: Vec<Hex>,
+        keccak_data: Vec<Hex>,
+    },
+    Account {
+        node: AccountNode,
+        values: Vec<Hex>,
+        keccak_data: Vec<Hex>,
+    },
+    Storage {
+        node: StorageNode,
+        values: Vec<Hex>,
+        keccak_data: Vec<Hex>,
+    },
 }
 
 /// RLP types start
