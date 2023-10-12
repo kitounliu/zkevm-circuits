@@ -4661,6 +4661,7 @@ dependencies = [
  "env_logger",
  "eth-types",
  "ethers-core",
+ "ethers-providers",
  "ethers-signers",
  "gadgets",
  "halo2_proofs",
@@ -4686,6 +4687,7 @@ dependencies = [
  "strum",
  "strum_macros",
  "thiserror",
+ "url",
 ]
 
 [[package]]
