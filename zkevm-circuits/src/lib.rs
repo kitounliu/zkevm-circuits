@@ -24,10 +24,7 @@ pub mod copy_circuit;
 pub mod evm_circuit;
 pub mod exp_circuit;
 pub mod keccak_circuit;
-#[allow(dead_code, reason = "under active development")]
-pub mod mpt_circuit;
 pub mod pi_circuit;
-pub mod root_circuit;
 pub mod state_circuit;
 pub mod super_circuit;
 pub mod table;
